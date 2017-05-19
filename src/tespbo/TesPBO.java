@@ -42,19 +42,27 @@ public class TesPBO {
                 System.out.println(i+" "+b.getNamaLengkap());
                 i++;
             }
-               
-        
-            i=1;
+
+            System.out.println("Masukkan Nama Circle ");
+        String teman = scan.nextLine();
+
+        peopleByForename.put(teman, pilihPeople);
+        // read from it
+        ArrayList<data> bobs = peopleByForename.get(teman);
+        data bob1 = bobs.get(0);
+        data bob2 = bobs.get(1);
+
+        System.out.println("Nama Circle : "+teman);
+        for (data a:bobs
+             ) {
+            System.out.println("Data ke-"+i);
+            System.out.println("Nama : "+a.getNamaLengkap());
+            System.out.println("Jenis kelamin : "+a.getJenisKelamin());
+            System.out.println("Jurusan : "+a.getJurusan());
+            System.out.println("Tanggal lahir : "+a.getTanggalLahir());
+            System.out.println("Hobby : "+a.getHobby());
             System.out.println("");
-            System.out.print("Masukkan Indeks User : ");
-            pilihIndeks = scan.nextInt();
-            pilihPeople.add(people.get(pilihIndeks-=1));
-            scan.nextLine();
-
-            System.out.print("Masukan indeks user lagi? (y/n) : ");
-            pilih = scan.nextLine().charAt(0);
-
+            i++;
         }
     }
     
-}
