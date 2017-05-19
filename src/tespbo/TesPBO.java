@@ -42,6 +42,17 @@ public class TesPBO {
                 System.out.println(i+" "+b.getNamaLengkap());
                 i++;
             }
+            i=1;
+            System.out.println("");
+            System.out.print("Masukkan Indeks User : ");
+            pilihIndeks = scan.nextInt();
+            pilihPeople.add(people.get(pilihIndeks-=1));
+            scan.nextLine();
+
+            System.out.print("Masukan indeks user lagi? (y/n) : ");
+            pilih = scan.nextLine().charAt(0);
+
+        }
 
             System.out.println("Masukkan Nama Circle ");
         String teman = scan.nextLine();
@@ -67,4 +78,3 @@ public class TesPBO {
     }
     
  }
-}
